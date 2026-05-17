@@ -1,0 +1,149 @@
+{
+  "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
+  "name": "Light Modern",
+  "author": "Microsoft",
+  "themes": [
+    {
+      "name": "Light Modern",
+      "appearance": "light",
+      "style": {
+        "background.appearance": "opaque",
+        "accents": [],
+        "border": "#E5E5E5",
+        "border.variant": "#E5E5E5",
+        "border.focused": "#005FB8",
+        "border.selected": "#E5E5E5",
+        "border.transparent": "#E5E5E5",
+        "border.disabled": "#E5E5E5",
+        "elevated_surface.background": "#FFFFFF",
+        "surface.background": "#F8F8F8",
+        "background": "#FFFFFF",
+        "element.background": "#005FB8",
+        "element.hover": "#F2F2F2",
+        "element.selected": "#E8E8E8",
+        "ghost_element.hover": "#F2F2F2",
+        "ghost_element.selected": "#E8E8E8",
+        "text": "#3B3B3B",
+        "text.muted": "#868686",
+        "status_bar.background": "#F8F8F8",
+        "title_bar.background": "#F8F8F8",
+        "toolbar.background": "#FFFFFF",
+        "tab_bar.background": "#F8F8F8",
+        "tab.inactive_background": "#F8F8F8",
+        "tab.active_background": "#FFFFFF",
+        "panel.background": "#F8F8F8",
+        "pane_group.border": "#E5E5E5",
+        "scrollbar.track.background": "#FFFFFF",
+        "scrollbar.track.border": "#E5E5E5",
+        "editor.foreground": "#3B3B3B",
+        "editor.background": "#FFFFFF",
+        "editor.gutter.background": "#FFFFFF",
+        "editor.line_number": "#6E7681",
+        "editor.active_line_number": "#3B3B3B",
+        "editor.wrap_guide": "#E5E5E5",
+        "editor.active_wrap_guide": "#E5E5E5",
+        "link_text.hover": "#005FB8",
+        "created": "#2EA043",
+        "deleted": "#F85149",
+        "hidden": "#868686",
+        "hint": "#969696ff",
+        "modified": "#005FB8",
+        "players": [],
+        "syntax": {
+          "attribute": {
+            "color": "#e50000"
+          },
+          "boolean": {
+            "color": "#0000ff"
+          },
+          "comment": {
+            "color": "#008000"
+          },
+          "comment.doc": {
+            "color": "#008000"
+          },
+          "constant": {
+            "color": "#0000ff"
+          },
+          "constructor": {
+            "color": "#800000"
+          },
+          "embedded": {
+            "color": "#000000ff"
+          },
+          "emphasis": {
+            "color": "#800080",
+            "font_style": "italic"
+          },
+          "emphasis.strong": {
+            "color": "#000080",
+            "font_weight": 700
+          },
+          "function": {
+            "color": "#795E26"
+          },
+          "keyword": {
+            "color": "#0000ff"
+          },
+          "number": {
+            "color": "#098658"
+          },
+          "operator": {
+            "color": "#000000"
+          },
+          "preproc": {
+            "color": "#0000ff"
+          },
+          "property": {
+            "color": "#e50000"
+          },
+          "punctuation": {
+            "color": "#800000"
+          },
+          "punctuation.bracket": {
+            "color": "#800000"
+          },
+          "punctuation.delimiter": {
+            "color": "#800000"
+          },
+          "punctuation.list_marker": {
+            "color": "#800000"
+          },
+          "punctuation.special": {
+            "color": "#800000"
+          },
+          "string": {
+            "color": "#a31515"
+          },
+          "string.escape": {
+            "color": "#0000ff"
+          },
+          "string.regex": {
+            "color": "#a31515"
+          },
+          "string.special": {
+            "color": "#a31515"
+          },
+          "string.special.symbol": {
+            "color": "#a31515"
+          },
+          "tag": {
+            "color": "#800000"
+          },
+          "text.literal": {
+            "color": "#a31515"
+          },
+          "type": {
+            "color": "#267f99"
+          },
+          "variable": {
+            "color": "#001080"
+          },
+          "variable.special": {
+            "color": "#0000ff"
+          }
+        }
+      }
+    }
+  ]
+}

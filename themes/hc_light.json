@@ -1,0 +1,111 @@
+{
+  "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
+  "name": "Light High Contrast",
+  "author": "Microsoft",
+  "themes": [
+    {
+      "name": "Light High Contrast",
+      "appearance": "light",
+      "style": {
+        "background.appearance": "opaque",
+        "accents": [],
+        "hint": "#969696ff",
+        "players": [],
+        "syntax": {
+          "attribute": {
+            "color": "#264F78"
+          },
+          "boolean": {
+            "color": "#0F4A85"
+          },
+          "comment": {
+            "color": "#515151"
+          },
+          "comment.doc": {
+            "color": "#515151"
+          },
+          "constant": {
+            "color": "#0F4A85"
+          },
+          "constructor": {
+            "color": "#0F4A85"
+          },
+          "embedded": {
+            "color": "#292929"
+          },
+          "emphasis": {
+            "color": "#800080",
+            "font_style": "italic"
+          },
+          "emphasis.strong": {
+            "color": "#000080",
+            "font_weight": 700
+          },
+          "function": {
+            "color": "#5e2cbc"
+          },
+          "keyword": {
+            "color": "#0F4A85"
+          },
+          "number": {
+            "color": "#096d48"
+          },
+          "operator": {
+            "color": "#000000"
+          },
+          "preproc": {
+            "color": "#0F4A85"
+          },
+          "property": {
+            "color": "#264F78"
+          },
+          "punctuation": {
+            "color": "#0F4A85"
+          },
+          "punctuation.bracket": {
+            "color": "#0F4A85"
+          },
+          "punctuation.delimiter": {
+            "color": "#0F4A85"
+          },
+          "punctuation.list_marker": {
+            "color": "#0F4A85"
+          },
+          "punctuation.special": {
+            "color": "#0F4A85"
+          },
+          "string": {
+            "color": "#0F4A85"
+          },
+          "string.escape": {
+            "color": "#0F4A85"
+          },
+          "string.regex": {
+            "color": "#0F4A85"
+          },
+          "string.special": {
+            "color": "#0F4A85"
+          },
+          "string.special.symbol": {
+            "color": "#0F4A85"
+          },
+          "tag": {
+            "color": "#0F4A85"
+          },
+          "text.literal": {
+            "color": "#0F4A85"
+          },
+          "type": {
+            "color": "#185E73"
+          },
+          "variable": {
+            "color": "#001080"
+          },
+          "variable.special": {
+            "color": "#0F4A85"
+          }
+        }
+      }
+    }
+  ]
+}

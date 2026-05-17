@@ -1,0 +1,147 @@
+{
+  "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
+  "name": "Dark Modern",
+  "author": "Microsoft",
+  "themes": [
+    {
+      "name": "Dark Modern",
+      "appearance": "dark",
+      "style": {
+        "background.appearance": "opaque",
+        "accents": [],
+        "border": "#2B2B2B",
+        "border.variant": "#2B2B2B",
+        "border.focused": "#0078D4",
+        "border.selected": "#2B2B2B",
+        "border.transparent": "#2B2B2B",
+        "border.disabled": "#2B2B2B",
+        "elevated_surface.background": "#313131",
+        "surface.background": "#181818",
+        "background": "#1F1F1F",
+        "element.background": "#0078D4",
+        "drop_target.background": "#383B3D",
+        "text": "#CCCCCC",
+        "text.muted": "#9D9D9D",
+        "status_bar.background": "#181818",
+        "title_bar.background": "#181818",
+        "toolbar.background": "#1F1F1F",
+        "tab_bar.background": "#181818",
+        "tab.inactive_background": "#181818",
+        "tab.active_background": "#1F1F1F",
+        "search.match_background": "#9E6A03",
+        "panel.background": "#181818",
+        "pane_group.border": "#FFFFFF17",
+        "scrollbar.track.background": "#1F1F1F",
+        "scrollbar.track.border": "#010409",
+        "editor.foreground": "#CCCCCC",
+        "editor.background": "#1F1F1F",
+        "editor.gutter.background": "#1F1F1F",
+        "editor.line_number": "#6E7681",
+        "editor.active_line_number": "#CCCCCC",
+        "editor.wrap_guide": "#2B2B2B",
+        "editor.active_wrap_guide": "#2B2B2B",
+        "link_text.hover": "#4daafc",
+        "created": "#2EA043",
+        "deleted": "#F85149",
+        "hidden": "#9D9D9D",
+        "hint": "#969696ff",
+        "modified": "#0078D4",
+        "players": [],
+        "syntax": {
+          "attribute": {
+            "color": "#9cdcfe"
+          },
+          "boolean": {
+            "color": "#569cd6"
+          },
+          "comment": {
+            "color": "#6A9955"
+          },
+          "comment.doc": {
+            "color": "#6A9955"
+          },
+          "constant": {
+            "color": "#569cd6"
+          },
+          "constructor": {
+            "color": "#569cd6"
+          },
+          "embedded": {
+            "color": "#D4D4D4"
+          },
+          "emphasis": {
+            "color": "#C586C0",
+            "font_style": "italic"
+          },
+          "emphasis.strong": {
+            "color": "#569cd6",
+            "font_weight": 700
+          },
+          "function": {
+            "color": "#DCDCAA"
+          },
+          "keyword": {
+            "color": "#569cd6"
+          },
+          "number": {
+            "color": "#b5cea8"
+          },
+          "operator": {
+            "color": "#d4d4d4"
+          },
+          "preproc": {
+            "color": "#569cd6"
+          },
+          "property": {
+            "color": "#9cdcfe"
+          },
+          "punctuation": {
+            "color": "#808080"
+          },
+          "punctuation.bracket": {
+            "color": "#808080"
+          },
+          "punctuation.delimiter": {
+            "color": "#808080"
+          },
+          "punctuation.list_marker": {
+            "color": "#808080"
+          },
+          "punctuation.special": {
+            "color": "#808080"
+          },
+          "string": {
+            "color": "#ce9178"
+          },
+          "string.escape": {
+            "color": "#569cd6"
+          },
+          "string.regex": {
+            "color": "#ce9178"
+          },
+          "string.special": {
+            "color": "#ce9178"
+          },
+          "string.special.symbol": {
+            "color": "#ce9178"
+          },
+          "tag": {
+            "color": "#569cd6"
+          },
+          "text.literal": {
+            "color": "#ce9178"
+          },
+          "type": {
+            "color": "#4EC9B0"
+          },
+          "variable": {
+            "color": "#9CDCFE"
+          },
+          "variable.special": {
+            "color": "#569cd6"
+          }
+        }
+      }
+    }
+  ]
+}
