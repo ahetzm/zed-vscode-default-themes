@@ -7,13 +7,13 @@ This Zed extension packages the default Microsoft VSCode themes from:
 ## Build / refresh themes
 
 ```sh
-node scripts/build-themes.mjs
+npm/yarn/pnpm run build
 ```
 
 To refresh the cached upstream repos first:
 
 ```sh
-node scripts/build-themes.mjs --refresh
+npm/yarn/pnpm run build:refresh
 ```
 
 What the build does:

@@ -1,0 +1,8 @@
+{
+  "name": "zed-vscode-default-themes",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-themes.mjs",
+    "build:refresh": "node scripts/build-themes.mjs --refresh"
+  }
+}
