@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -51,12 +53,23 @@ jobs:
       - name: Bump extension version
         if: steps.changes.outputs.has_changes == 'true'
         run: |
-          node --input-type=module -e "import fs from 'node:fs'; const filePath = 'extension.toml'; const source = fs.readFileSync(filePath, 'utf8'); const match = source.match(/^version = \"(\\d+)\.(\\d+)\.(\\d+)\"$/m); if (!match) throw new Error('Could not find version in extension.toml'); const nextVersion = [match[1], match[2], Number(match[3]) + 1].join('.'); fs.writeFileSync(filePath, source.replace(match[0], `version = \"${nextVersion}\"`));"
+          current_version=$(grep '^version = "' extension.toml | sed -E 's/^version = "([0-9]+\.[0-9]+\.[0-9]+)"$/\1/')
+          if [ -z "$current_version" ]; then
+            echo "Could not find version in extension.toml"
+            exit 1
+          fi
+
+          IFS='.' read -r major minor patch <<< "$current_version"
+          next_version="$major.$minor.$((patch + 1))"
+          sed -i -E "s/^version = \"[0-9]+\.[0-9]+\.[0-9]+\"$/version = \"$next_version\"/" extension.toml
+          echo "Bumped extension version to $next_version"
 
       - name: Create pull request
         if: steps.changes.outputs.has_changes == 'true'
+        id: cpr
         uses: peter-evans/create-pull-request@v7
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Refresh bundled VSCode themes and bump extension version
           branch: ci/monthly-theme-refresh
           delete-branch: true
@@ -74,3 +87,10 @@ jobs:
             extension.toml
           labels: |
             automated
+
+      - name: Report pull request result
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          echo "pull-request-operation=${{ steps.cpr.outputs.pull-request-operation }}"
+          echo "pull-request-number=${{ steps.cpr.outputs.pull-request-number }}"
+          echo "pull-request-url=${{ steps.cpr.outputs.pull-request-url }}"
