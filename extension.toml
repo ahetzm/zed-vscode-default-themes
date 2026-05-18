@@ -1,6 +1,6 @@
 id = "vscode-default-theme"
 name = "VSCode Default Themes"
-version = "0.1.0"
+version = "0.1.1"
 schema_version = 1
 authors = ["ahetzm"]
 description = "VSCode default themes converted for Zed."
