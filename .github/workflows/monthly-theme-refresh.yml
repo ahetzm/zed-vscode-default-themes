@@ -1,0 +1,59 @@
+name: Monthly Theme Refresh
+
+on:
+  schedule:
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh-themes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Set up Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache cargo registry and build output
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            .cache/cargo-target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('scripts/**/*.mjs') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
+
+      - name: Refresh themes
+        run: npm run build:refresh
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: Refresh bundled VSCode themes
+          branch: ci/monthly-theme-refresh
+          delete-branch: true
+          title: Refresh bundled VSCode themes
+          body: |
+            ## Summary
+            - refresh cached upstream repositories
+            - rebuild bundled Zed theme files from the latest VSCode defaults
+
+            ## Notes
+            - generated automatically by the monthly GitHub Actions workflow
+          add-paths: |
+            themes/**
+          labels: |
+            automated
