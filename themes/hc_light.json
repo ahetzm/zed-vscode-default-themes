@@ -28,7 +28,7 @@
             "color": "#0F4A85"
           },
           "constructor": {
-            "color": "#0F4A85"
+            "color": "#185E73"
           },
           "embedded": {
             "color": "#292929"
@@ -78,10 +78,10 @@
             "color": "#0F4A85"
           },
           "string.escape": {
-            "color": "#0F4A85"
+            "color": "#EE0000"
           },
           "string.regex": {
-            "color": "#0F4A85"
+            "color": "#811F3F"
           },
           "string.special": {
             "color": "#0F4A85"
@@ -103,6 +103,18 @@
           },
           "variable.special": {
             "color": "#0F4A85"
+          },
+          "variant": {
+            "color": "#02715D"
+          },
+          "type.enum.member": {
+            "color": "#02715D"
+          },
+          "enum": {
+            "color": "#185E73"
+          },
+          "type.enum": {
+            "color": "#185E73"
           }
         }
       }

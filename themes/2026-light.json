@@ -19,10 +19,10 @@
         "surface.background": "#FAFAFD",
         "background": "#FFFFFF",
         "element.background": "#0069CC",
-        "element.hover": "#DADADA4f",
+        "element.hover": "#F1F1F3",
         "element.selected": "#0069CC1A",
         "drop_target.background": "#0069CC15",
-        "ghost_element.hover": "#DADADA4f",
+        "ghost_element.hover": "#F1F1F3",
         "ghost_element.selected": "#0069CC1A",
         "text": "#202020",
         "text.muted": "#606060",
@@ -139,7 +139,7 @@
             "color": "#0a3069"
           },
           "string.escape": {
-            "color": "#cf222e"
+            "color": "#EE0000"
           },
           "string.regex": {
             "color": "#0a3069"
@@ -167,6 +167,18 @@
           },
           "variable.special": {
             "color": "#0550ae"
+          },
+          "variant": {
+            "color": "#0550ae"
+          },
+          "type.enum.member": {
+            "color": "#0550ae"
+          },
+          "enum": {
+            "color": "#267f99"
+          },
+          "type.enum": {
+            "color": "#267f99"
           }
         }
       }

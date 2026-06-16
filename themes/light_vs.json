@@ -87,7 +87,7 @@
             "color": "#a31515"
           },
           "string.regex": {
-            "color": "#a31515"
+            "color": "#811f3f"
           },
           "string.special": {
             "color": "#a31515"
@@ -106,6 +106,12 @@
           },
           "variable.special": {
             "color": "#0000ff"
+          },
+          "variant": {
+            "color": "#098658"
+          },
+          "type.enum.member": {
+            "color": "#098658"
           }
         }
       }

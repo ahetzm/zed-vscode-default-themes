@@ -66,7 +66,7 @@
             "color": "#0000ff"
           },
           "constructor": {
-            "color": "#800000"
+            "color": "#267f99"
           },
           "embedded": {
             "color": "#000000ff"
@@ -116,10 +116,10 @@
             "color": "#a31515"
           },
           "string.escape": {
-            "color": "#0000ff"
+            "color": "#EE0000"
           },
           "string.regex": {
-            "color": "#a31515"
+            "color": "#811f3f"
           },
           "string.special": {
             "color": "#a31515"
@@ -141,6 +141,18 @@
           },
           "variable.special": {
             "color": "#0000ff"
+          },
+          "variant": {
+            "color": "#0070C1"
+          },
+          "type.enum.member": {
+            "color": "#0070C1"
+          },
+          "enum": {
+            "color": "#267f99"
+          },
+          "type.enum": {
+            "color": "#267f99"
           }
         }
       }

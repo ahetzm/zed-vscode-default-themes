@@ -35,7 +35,7 @@
             "color": "#569cd6"
           },
           "constructor": {
-            "color": "#569cd6"
+            "color": "#4EC9B0"
           },
           "embedded": {
             "color": "#FFFFFF"
@@ -80,7 +80,7 @@
             "color": "#569cd6"
           },
           "string.regex": {
-            "color": "#ce9178"
+            "color": "#d16969"
           },
           "string.special": {
             "color": "#ce9178"
@@ -102,6 +102,12 @@
           },
           "variable.special": {
             "color": "#9CDCFE"
+          },
+          "enum": {
+            "color": "#4EC9B0"
+          },
+          "type.enum": {
+            "color": "#4EC9B0"
           }
         }
       }
