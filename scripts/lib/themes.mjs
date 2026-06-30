@@ -188,8 +188,81 @@ function copySyntax(importedTheme, sourceName, targetName) {
 	importedTheme.style.syntax[targetName] ??= cloneValue(source);
 }
 
+function themeColor(resolvedTheme, name) {
+	const color = resolvedTheme.colors?.[name];
+	return typeof color === "string" && color.length > 0 ? color : null;
+}
+
+function firstOpaqueThemeColor(resolvedTheme, names) {
+	const colors = resolvedTheme.colors ?? {};
+
+	for (const name of names) {
+		const color = colors[name];
+
+		if (typeof color !== "string" || color.length === 0) {
+			continue;
+		}
+
+		if (color.length === 7 || color.slice(-2).toLowerCase() === "ff") {
+			return color;
+		}
+	}
+
+	return null;
+}
+
+function selectedForegroundFallback(importedTheme) {
+	return importedTheme.appearance === "light" ? "#000000" : "#ffffff";
+}
+
+function improveUiFidelity(importedTheme, resolvedTheme) {
+	const accent = firstOpaqueThemeColor(resolvedTheme, [
+		"focusBorder",
+		"activityBarBadge.background",
+		"button.background",
+		"menu.selectionBackground",
+		"list.activeSelectionBackground",
+	]);
+
+	if (accent && (!importedTheme.style.accents || importedTheme.style.accents.length === 0)) {
+		importedTheme.style.accents = [accent];
+	}
+
+	let selectedBackground = null;
+	let selectedForeground = null;
+
+	for (const [backgroundKey, foregroundKey] of [
+		["list.activeSelectionBackground", "list.activeSelectionForeground"],
+		["menu.selectionBackground", "menu.selectionForeground"],
+		["tab.selectedBackground", "tab.selectedForeground"],
+	]) {
+		selectedBackground = themeColor(resolvedTheme, backgroundKey);
+		selectedForeground = themeColor(resolvedTheme, foregroundKey);
+
+		if (selectedBackground) {
+			break;
+		}
+	}
+
+	if (selectedBackground) {
+		importedTheme.style["element.selected"] = selectedBackground;
+		importedTheme.style["ghost_element.selected"] = selectedBackground;
+	}
+
+	if (selectedBackground || selectedForeground) {
+		importedTheme.style["text.accent"] =
+			selectedForeground ?? selectedForegroundFallback(importedTheme);
+	}
+}
+
 function improveSyntaxFidelity(importedTheme, resolvedTheme) {
 	setSyntaxFromScopes(importedTheme, resolvedTheme, "constructor", [
+		"support.class.component",
+		"support.class",
+		"entity.name.class",
+		"entity.name.type",
+	]);
+	setSyntaxFromScopes(importedTheme, resolvedTheme, "tag.component.jsx", [
 		"support.class.component",
 		"support.class",
 		"entity.name.class",
@@ -328,6 +401,7 @@ export function buildTheme(fileName) {
 	const importedTheme = JSON.parse(fs.readFileSync(importedPath, "utf8"));
 	delete importedTheme.$schema;
 	importedTheme.appearance = appearance;
+	improveUiFidelity(importedTheme, resolvedTheme);
 	improveSyntaxFidelity(importedTheme, resolvedTheme);
 
 	const family = {
