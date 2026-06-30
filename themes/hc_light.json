@@ -104,6 +104,9 @@
           "variable.special": {
             "color": "#0F4A85"
           },
+          "tag.component.jsx": {
+            "color": "#185E73"
+          },
           "variant": {
             "color": "#02715D"
           },

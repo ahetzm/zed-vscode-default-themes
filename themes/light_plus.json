@@ -8,7 +8,9 @@
       "appearance": "light",
       "style": {
         "background.appearance": "opaque",
-        "accents": [],
+        "accents": [
+          "#007ACC"
+        ],
         "background": "#FFFFFF",
         "element.hover": "#E8E8E8",
         "ghost_element.hover": "#E8E8E8",
@@ -113,6 +115,9 @@
           "variable.special": {
             "color": "#0000ff"
           },
+          "tag.component.jsx": {
+            "color": "#267f99"
+          },
           "variant": {
             "color": "#0070C1"
           },
@@ -125,7 +130,10 @@
           "type.enum": {
             "color": "#267f99"
           }
-        }
+        },
+        "element.selected": "#ffffffa5",
+        "ghost_element.selected": "#ffffffa5",
+        "text.accent": "#333333b3"
       }
     }
   ]

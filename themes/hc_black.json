@@ -103,6 +103,9 @@
           "variable.special": {
             "color": "#9CDCFE"
           },
+          "tag.component.jsx": {
+            "color": "#4EC9B0"
+          },
           "enum": {
             "color": "#4EC9B0"
           },

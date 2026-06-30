@@ -8,7 +8,9 @@
       "appearance": "light",
       "style": {
         "background.appearance": "opaque",
-        "accents": [],
+        "accents": [
+          "#005FB8"
+        ],
         "border": "#E5E5E5",
         "border.variant": "#E5E5E5",
         "border.focused": "#005FB8",
@@ -142,6 +144,9 @@
           "variable.special": {
             "color": "#0000ff"
           },
+          "tag.component.jsx": {
+            "color": "#267f99"
+          },
           "variant": {
             "color": "#0070C1"
           },
@@ -154,7 +159,8 @@
           "type.enum": {
             "color": "#267f99"
           }
-        }
+        },
+        "text.accent": "#000000"
       }
     }
   ]

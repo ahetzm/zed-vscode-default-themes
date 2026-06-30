@@ -8,7 +8,9 @@
       "appearance": "dark",
       "style": {
         "background.appearance": "opaque",
-        "accents": [],
+        "accents": [
+          "#0078D4"
+        ],
         "border": "#2B2B2B",
         "border.variant": "#2B2B2B",
         "border.focused": "#0078D4",
@@ -140,6 +142,9 @@
           "variable.special": {
             "color": "#569cd6"
           },
+          "tag.component.jsx": {
+            "color": "#4EC9B0"
+          },
           "variant": {
             "color": "#4FC1FF"
           },
@@ -152,7 +157,10 @@
           "type.enum": {
             "color": "#4EC9B0"
           }
-        }
+        },
+        "element.selected": "#0078d4",
+        "ghost_element.selected": "#0078d4",
+        "text.accent": "#ffffff"
       }
     }
   ]
